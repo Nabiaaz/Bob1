@@ -1,0 +1,7 @@
+# Contenu du fichier Caddyfile
+marleyn.xyz {
+    # On utilise des variables d'environnement pour ne pas lier le code à une machine précise
+    reverse_proxy /vless-ws {$VLESS_UPSTREAM}
+    reverse_proxy /trojan-ws {$TROJAN_UPSTREAM}
+    reverse_proxy /ss-ws {$SS_UPSTREAM}
+}
